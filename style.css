@@ -1,0 +1,214 @@
+/*global*/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ddd;
+    z-index: 1000;
+
+}
+
+body {
+    padding-top: 800px;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding-top: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    background-color: #F5F5F5;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.css' rel='stylesheet' />
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.js'></script>
+
+}
+
+/*barre menu*/
+.barre_bouton_menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ddd;
+    padding: 10px;
+}
+
+.bouton_menu {
+    background: #4da6ff;
+    color: white;
+    border: none;
+    padding: 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.bouton_menu_gauche {
+    display: flex;
+    gap: 5px;
+}
+
+
+/*acceuil*/
+.recent-courses{
+    background: #d9d9d9;
+    margin: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.activity {
+    background: #d9d9d9;
+    margin: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    max-height: 400px;
+    overflow-y: auto;
+    font-size: 1.2em;
+}
+
+
+#scroll-trigger {
+    height: 20px;
+}
+
+
+.course-list {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    max-height: 300px;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    justify-content: space-evenly;
+
+}
+
+
+
+.course-img {
+    background: #63D1F4;
+    width: 300px;
+    height: 200px;
+    border-radius: 3px;
+}
+
+.cour {
+    text-align: center;
+    border: 2px solid #bbb;
+    border-radius: 5px;
+    background: #ddd;
+}
+
+#bouton_defil_cour {
+    background: #4da6ff;
+    color: white;
+    border: none;
+    margin: 5px;
+    margin-top: 10px;
+    padding: 10px ;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 2em;
+    align-self: center;
+}
+
+.page_acceuil {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#page_acceuil_agenda {
+    max-height: 570px;
+    width: 400px;
+}
+
+#agenda{
+    height: 500px;
+    margin: 0 auto;
+    min-width: 400px;
+}
+
+.lien {
+    color: #63D1F4;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.lien:hover {
+    color: #1C4E80; /* turquoise foncé au survol */
+    text-decoration: underline;
+}
+
+
+/*connexion*/
+.page_connexion {
+    margin-top: 100px;
+    background-color: #F5F5F5;
+    font-size: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+}
+
+.connexion_input{
+    padding: 10px;
+    font-size: 18px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.bouton_connection {
+    background: #4da6ff;
+    color: white;
+    border: none;
+    padding: 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#message_erreur {
+    color: white;
+    background-color: #ff4d4d;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 14px;
+    border: 1px solid red;
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+/*agenda*/
+#page_agenda {
+    width: 50%;
+}
