@@ -210,20 +210,80 @@ main {
 }
 
 
-/*cours*/
-.page_cours{
+/* Cours page */
+.page_cours {
     display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+    flex-direction: column; /* Empiler les éléments verticalement */
+    gap: 20px; /* Espacement entre chaque section */
+    width: 100%;
+    padding: 20px; /* Ajouter du padding pour espacer un peu les bords */
 }
 
+/* Conteneur de l'en-tête du cours */
+.header-cours {
+    display: flex;
+    flex-direction: column; /* Empiler les éléments verticalement */
+    align-items: center; /* Centrer les éléments horizontalement */
+    margin-bottom: 20px;
+}
+
+/* Titre du cours */
+.titre-cours {
+    font-size: 2.5em;
+    margin: 0;
+    color: #1C4E80;
+    text-align: center;
+}
+
+/* Sous-titre (contenu du cours) */
+.sous-titre {
+    font-size: 1.5em;
+    color: #777;
+    text-align: center;
+    margin-top: 10px; /* Espace au-dessus du sous-titre */
+}
+
+/* Menu de navigation entre les sections (Notes et Participants) */
+.menu-cours {
+    display: flex;
+    flex-direction: column; /* Empiler les boutons verticalement */
+    align-items: center; /* Centrer les boutons horizontalement */
+    gap: 10px; /* Espacement entre les boutons */
+    margin-top: 20px; /* Un peu de marge au-dessus */
+}
+
+.menu-btn {
+    padding: 10px 20px;
+    background-color: #4da6ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 200px; /* Largeur fixe pour les boutons */
+}
+
+.menu-btn:hover {
+    background-color: #1C4E80; /* Change la couleur au survol */
+}
+
+/* Sections du cours */
+.sections-cours {
+    width: 100%;
+    max-width: 1200px; /* Largeur maximale */
+    margin: 0 auto; /* Centrage */
+    padding: 0 20px;
+}
+
+/* Style de chaque section */
 .section {
+    width: 100%;
     background-color: #e6e6e6;
     margin: 10px 0;
     border-radius: 8px;
     overflow: hidden;
 }
 
+/* Titre des sections (cliquable) */
 .section-header {
     background-color: #ccc;
     padding: 15px;
@@ -231,14 +291,29 @@ main {
     font-weight: bold;
 }
 
+/* Contenu des sections (caché par défaut) */
 .section-content {
     display: none;
     padding: 10px 15px;
     background-color: #f9f9f9;
 }
 
-.active .section-content {
+/* Lorsqu'une section est active (ouverte), on l'affiche */
+.section.active .section-content {
     display: block;
+}
+
+/* Transition d'ouverture de section */
+.section-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    padding: 0 15px;
+}
+
+.section.active .section-content {
+    max-height: 500px; /* Ajuste la hauteur selon le contenu */
+    padding: 10px 15px;
 }
 
 
