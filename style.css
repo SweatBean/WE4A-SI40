@@ -290,11 +290,11 @@ main {
     font-weight: bold;
 }
 
-.notes-table tr {
+#notes-cliquable tr {
     cursor: pointer;
     transition: background-color 0.2s;
 }
 
-.notes-table tr:hover {
+#notes-cliquable tr:hover {
     background-color: #eef2f7;
 }
