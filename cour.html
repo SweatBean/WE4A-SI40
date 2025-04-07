@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cours</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav class="barre_bouton_menu">
+        <div class="bouton_menu_gauche">
+            <a href="accueil.html">
+                <button class="bouton_menu">Accueil</button>
+            </a>
+            <a href="cours.html">
+                <button class="bouton_menu">mes cours</button>
+            </a>
+            <a href="notes.html">
+                <button class="bouton_menu">mes notes</button>
+            </a>
+        </div>
+        <div>
+            <a href="connexion.html">
+                <button class="bouton_menu">déconnexion</button>
+            </a>
+        </div>
+    </nav>
+</header>
+
+<div class="page_cours">
+    <main>
+        <div id="contenu" class="page_acceuil">
+            <div class="recent-courses" style="width: 100%;">
+                <h3>Contenu du cours</h3>
+    
+                <!-- Section accordéon -->
+                <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">Section 1 : Introduction</div>
+                    <div class="section-content">Bienvenue dans la section 1. Voici le contenu introductif du cours.</div>
+                </div>
+    
+                <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">Section 2 : Théorie</div>
+                    <div class="section-content">Voici la théorie importante du cours. Documents et vidéos ici.</div>
+                </div>
+    
+                <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">Section 3 : Exercices</div>
+                    <div class="section-content">Voici quelques exercices à réaliser pour pratiquer.</div>
+                </div>
+    
+                <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">Section 4 : Étude de cas</div>
+                    <div class="section-content">Étude de cas pratique sur le sujet du cours.</div>
+                </div>
+    
+                <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">Section 5 : Évaluation</div>
+                    <div class="section-content">Tests, quiz et évaluation finale.</div>
+                </div>
+            </div>
+        </div>
+    
+        <div id="notes" class="page_acceuil" style="display:none;">
+            <div class="activity" style="width: 100%;">
+                <h3>Notes</h3>
+                <p>En travaux...</p>
+            </div>
+        </div>
+    
+        <div id="participants" class="page_acceuil" style="display:none;">
+            <div class="activity" style="width: 100%;">
+                <h3>Participants</h3>
+                <p>En travaux...</p>
+            </div>
+        </div>
+    </main>
+
+
+</div>
+
+<script src="cours.js"></script>
+</body>
+</html>
+</title>
+</head>
+<body>
+</body>
+</html>
+
