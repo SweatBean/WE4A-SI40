@@ -10,7 +10,6 @@ header {
 }
 
 body {
-    padding-top: 800px;
     font-family: Arial, sans-serif;
     background-color: #fff;
     margin: 0;
@@ -25,8 +24,8 @@ main {
     margin: 20px;
     padding: 10px;
     border-radius: 10px;
-
 }
+
 
 /*barre menu*/
 .barre_bouton_menu {
@@ -248,4 +247,11 @@ main {
 /*agenda*/
 #page_agenda {
     width: 50%;
+}
+
+
+
+/*cours*/
+#main_cours{
+    width: 100%;
 }
