@@ -210,22 +210,17 @@ main {
 }
 
 
-/* Cours page */
+
+
+/*cour*/
 .page_cours {
-    display: flex;
-    flex-direction: column; /* Empiler les éléments verticalement */
     gap: 20px; /* Espacement entre chaque section */
     width: 100%;
     padding: 20px; /* Ajouter du padding pour espacer un peu les bords */
 }
 
 /* Conteneur de l'en-tête du cours */
-.header-cours {
-    display: flex;
-    flex-direction: column; /* Empiler les éléments verticalement */
-    align-items: center; /* Centrer les éléments horizontalement */
-    margin-bottom: 20px;
-}
+
 
 /* Titre du cours */
 .titre-cours {
@@ -244,13 +239,7 @@ main {
 }
 
 /* Menu de navigation entre les sections (Notes et Participants) */
-.menu-cours {
-    display: flex;
-    flex-direction: column; /* Empiler les boutons verticalement */
-    align-items: center; /* Centrer les boutons horizontalement */
-    gap: 10px; /* Espacement entre les boutons */
-    margin-top: 20px; /* Un peu de marge au-dessus */
-}
+
 
 .menu-btn {
     padding: 10px 20px;
@@ -259,20 +248,12 @@ main {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    width: 200px; /* Largeur fixe pour les boutons */
+    width: 150px; /* Largeur fixe pour les boutons */
 }
 
-.menu-btn:hover {
-    background-color: #1C4E80; /* Change la couleur au survol */
-}
 
-/* Sections du cours */
-.sections-cours {
-    width: 100%;
-    max-width: 1200px; /* Largeur maximale */
-    margin: 0 auto; /* Centrage */
-    padding: 0 20px;
-}
+
+
 
 /* Style de chaque section */
 .section {
@@ -315,6 +296,31 @@ main {
     max-height: 500px; /* Ajuste la hauteur selon le contenu */
     padding: 10px 15px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
