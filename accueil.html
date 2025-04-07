@@ -34,20 +34,20 @@
         <section class="recent-courses">
             <h2>cour récent</h2>
             <div class="course-list">
-                <div class="cour">
+                <div class="cour" onclick="window.location.href='cour.html'" style="cursor: pointer;">
                     <div class="course-img"></div>
                     <p>WE4A</p>
-                    <a class="lien" href="#">Sujet TD3 ⬇</a>
+                    <a class="lien" href="#" onclick="event.stopPropagation();">Sujet TD3 ⬇</a>
                 </div>
-                <div class="cour">
+                <div class="cour" onclick="window.location.href='cour.html'" style="cursor: pointer;">
                     <div class="course-img"></div>
                     <p>SI40</p>
-                    <a>Salle A101</a>
+                    <p >Salle A101</p>
                 </div>
-                <div class="cour">
+                <div class="cour" onclick="window.location.href='cour.html'" style="cursor: pointer;">
                     <div class="course-img"></div>
                     <p>RS40</p>
-                    <a>Début TP</a>
+                    <p>Début TP</p>
                 </div>
             </div>
             <button id="bouton_defil_cour">▼</button>
