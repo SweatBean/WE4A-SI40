@@ -3,10 +3,10 @@ document.getElementById("bouton_defil_cour").addEventListener("click", function 
 
     // Comparer correctement la valeur de maxHeight
     if (getComputedStyle(container).maxHeight === "300px") {
-        container.style.maxHeight = "none";  // Affiche tous les cours
+        container.style.maxHeight = "none";
         this.textContent = "▲";
     } else {
-        container.style.maxHeight = "300px"; // Revient à une seule ligne
+        container.style.maxHeight = "300px";
         this.textContent = "▼";
     }
 });
@@ -16,14 +16,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const activityContainer = document.getElementById("activity-container");
     const scrollTrigger = document.getElementById("scroll-trigger");
 
-    let loading = false; // Empêche le chargement multiple
-    let itemCount = 20; // Nombre d’éléments à charger à chaque fois
+    let loading = false;
+    let itemCount = 20;
 
     function loadMoreItems() {
-        if (loading) return; // Évite le chargement en double
+        if (loading) return;
         loading = true;
 
-        setTimeout(() => { // Simule un délai de chargement
+        setTimeout(() => {
             for (let i = 0; i < itemCount; i++) {
                 let newItem = document.createElement("li");
                 newItem.classList.add("activity-item");
@@ -34,14 +34,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 50);
     }
 
-    // Détecte si on arrive en bas du conteneur
+
     document.querySelector(".activity").addEventListener("scroll", function () {
         if (this.scrollTop + this.clientHeight >= this.scrollHeight - 10) {
             loadMoreItems();
         }
     });
 
-    // Charge les premiers éléments au démarrage
+
     loadMoreItems();
 });
 
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         ],
         eventClick: function(info) {
-            // Empêche l'ouverture dans un nouvel onglet
+
             info.jsEvent.preventDefault();
 
             window.location.href="agenda.html";

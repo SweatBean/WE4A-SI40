@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     if (formConnexion) {
         formConnexion.addEventListener("submit", function (event) {
-            event.preventDefault(); // Empêche le rechargement
+            event.preventDefault();
 
             const nom = document.getElementById("utilisateur").value;
             const motDePasse = document.getElementById("mdp").value;
@@ -16,13 +16,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
             //todo verifier nom utilisateur pas déjà utiliser
 
-            // Vérification des mots de passe
+
             if (motDePasse !== motDePasseConfirm) {
                 messageErreur.textContent = "Les mots de passe ne correspondent pas.";
                 return;
             }
 
-            window.location.href = "accueil.html"; // ou redirection si tu veux
+            window.location.href = "accueil.html";
         });
     }
 });

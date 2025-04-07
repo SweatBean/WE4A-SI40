@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     if (formConnexion) {
         document.getElementById("form_connexion").addEventListener("submit", function (event) {
-            event.preventDefault(); // Empêche l'envoi du formulaire (rechargement de la page)
+            event.preventDefault();
 
             const nom = document.getElementById("utilisateur").value;
             const motDePasse = document.getElementById("mdp").value;
@@ -11,9 +11,9 @@ document.addEventListener("DOMContentLoaded", function() {
             console.log("Nom d'utilisateur :", nom);
             console.log("Mot de passe :", motDePasse);
 
-            // Vérification des identifiants
+
             if (nom === "admin" && motDePasse === "1234") {
-                window.location.href = "accueil.html"; // Redirige vers la page d'accueil
+                window.location.href = "accueil.html";
             } else {
                 document.getElementById("erreur_message").textContent = "Identifiants ou mdp incorrects. Veux-tu t'inscrire ?";
             }

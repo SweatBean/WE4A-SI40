@@ -15,15 +15,15 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         ],
         eventClick: function(info) {
-            info.jsEvent.preventDefault(); // pas d'ouverture par défaut
+            info.jsEvent.preventDefault();
 
-            // Récupérer les données de l’événement
+
             const titre = info.event.title;
             const cour = info.event.extendedProps.cour;
             const description = info.event.extendedProps.description;
             const date = info.event.start.toLocaleDateString('fr-FR');
 
-            // Insérer les infos dans le <main>
+
             main.innerHTML = `
                     <h2>${titre}</h2>
                     <p><strong>Cours :</strong> ${cour}</p>
