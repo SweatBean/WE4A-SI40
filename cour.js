@@ -13,5 +13,14 @@ function toggleSection(element) {
     section.classList.toggle('active');
 }
 
+function showSection(sectionId) {
+    // Masque toutes les sections
+    document.getElementById('notes').style.display = 'none';
+    document.getElementById('participants').style.display = 'none';
+
+    // Affiche la section demandée
+    document.getElementById(sectionId).style.display = 'block';
+}
+
 // Par défaut, afficher "contenu"
 afficherOnglet('contenu');
