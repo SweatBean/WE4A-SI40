@@ -57,18 +57,16 @@ document.addEventListener('DOMContentLoaded', function () {
             {
                 title: 'Rendus projet',
                 cour: 'WE4A',
-                start: '2025-04-07',
-                url: 'agenda.html'  //surrement url différent selon event
+                description: 'Il faut rendre une version préliminaire du site contenant HTML, CSS, JS',
+                start: '2025-04-07'  //todo quand on clique sur l'event aller sur agenda et afficher l'event en question
             }
         ],
         eventClick: function(info) {
             // Empêche l'ouverture dans un nouvel onglet
             info.jsEvent.preventDefault();
 
-            // Redirige vers l'URL définie
-            if (info.event.url) {
-                window.location.href = info.event.url;
-            }
+            window.location.href="agenda.html";
+
         }
     });
 

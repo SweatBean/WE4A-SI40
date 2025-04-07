@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (nom === "admin" && motDePasse === "1234") {
                 window.location.href = "accueil.html"; // Redirige vers la page d'accueil
             } else {
-                alert("Identifiants incorrects.");//todo (demander inscription)
+                document.getElementById("erreur_message").textContent = "Identifiants ou mdp incorrects. Veux-tu t'inscrire ?";
             }
         });
     }
