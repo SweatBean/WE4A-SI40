@@ -290,6 +290,11 @@ main {
     font-weight: bold;
 }
 
+.notes-table tr {
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
 .notes-table tr:hover {
-    background-color: #f9f9f9;
+    background-color: #eef2f7;
 }
