@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Accueil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav class="barre_bouton_menu">
+        <div class="bouton_menu_gauche">
+
+        </div>
+        <div>
+            <a href="connexion.html">
+                <button class="bouton_menu">déconnexion</button>
+            </a>
+        </div>
+    </nav>
+</header>
+
+
+
+
+<main id="main_cours">
+    <div class="tabs">
+        <button class="tab-button active" onclick="openTab('tabUE')">UE</button>
+        <button class="tab-button" onclick="openTab('tabcour')">User</button>
+    </div>
+
+    <section class="recent-courses">
+        <div id="tabUE" class="tab-content active">
+            <div class="form-section">
+                <h2>Créer une UE</h2>
+                <input type="text" id="ueName" placeholder="Nom de l'UE">
+                <button onclick="createUE()">Créer UE</button>
+            </div>
+
+            <div class="form-section">
+                <h2>Catalogue des UE</h2>
+                <input type="text" id="searchUE" placeholder="Rechercher une UE..." oninput="refreshUEList()">
+                <div id="ueList" class="list"></div>
+            </div>
+        </div>
+
+        <div id="tabcour" class="tab-content">
+            <div class="form-section">
+                <h2>Créer un User</h2>
+                <input type="text" id="userName" placeholder="Nom d'utilisateur" value="Jean Dupont">
+                <select id="userRole">
+                    <option value="Étudiant">Étudiant</option>
+                    <option value="Enseignant">Enseignant</option>
+                </select>
+                <button onclick="createUser()">Créer Utilisateur</button>
+            </div>
+
+            <div class="form-section">
+                <h2>Catalogue des Users</h2>
+                <input type="text" id="searchUser" placeholder="Rechercher un utilisateur..." oninput="refreshUserList()">
+                <div id="userList" class="list"></div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+
+
+
+<script src="admin.js"></script>
+</body>
+</html>
+</title>
+</head>
+<body>
+</body>
+</html>
