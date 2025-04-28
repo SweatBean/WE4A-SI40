@@ -11,6 +11,8 @@ document.getElementById("bouton_defil_cour").addEventListener("click", function 
 });
 
 
+
+
 document.addEventListener("DOMContentLoaded", function () {
     const activityContainer = document.getElementById("activity-container");
     const scrollTrigger = document.getElementById("scroll-trigger");
@@ -71,3 +73,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     calendar.render();
 });
+
+const container = document.querySelector(".course-list");
+const bouton_defil_cour = document.getElementById('bouton_defil_cour');
+if (container.scrollHeight <= container.clientHeight) {
+    bouton_defil_cour.style.display = 'none'; // Pas besoin de "voir plus"
+} else {
+    bouton_defil_cour.style.display = 'block'; // Il y a du contenu caché
+}
