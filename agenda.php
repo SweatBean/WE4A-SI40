@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Agenda</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <nav class="barre_bouton_menu">
+        <div class="bouton_menu_gauche">
+            <a href="accueil.html">
+                <button class="bouton_menu">accueil</button>
+            </a>
+            <a href="cours.html">
+                <button class="bouton_menu">mes cours</button>
+            </a>
+            <a href="notes.html">
+                <button class="bouton_menu">mes notes</button>
+            </a>
+        </div>
+        <div>
+            <a href="connexion.html">
+                <button class="bouton_menu">déconnexion</button>
+            </a>
+        </div>
+    </nav>
+</header>
+
+
+
+
+
+<main id="page_agenda">
+    <!-- FullCalendar CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
+
+    <!-- FullCalendar JS -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+
+    <h2>Mon Agenda</h2>
+    <div id="agenda"></div>
+</main>
+<main id="eventDetails">
+</main>
+
+
+
+
+
+
+
+
+
+
+
+<script src="agenda.js"></script>
+
+
+</body>
+</html>

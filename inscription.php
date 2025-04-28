@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Inscription</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+
+
+
+<section class="page_connexion">
+    <h2>inscription</h2>
+    <div>
+        pas encore<br>
+        implémanter
+    </div>
+    <form id="form_connexion">
+        <input class="connexion_input" type="text" id="utilisateur" placeholder="nom d'utilisateur" required>
+        <input class="connexion_input" type="password" id="mdp" placeholder="mot de passe" required>
+        <input class="connexion_input" type="password" id="mdp_confirm" placeholder="confirmer le mot de passe" required>
+        <button class="bouton_connection" type="submit">Inscription</button>
+        <div id="erreur_message" style="color: red; margin-top: 8px;"></div>
+    </form>
+
+</section>
+
+
+
+
+
+<script src="inscription.js"></script>
+</body>
+</html>
+</title>
+</head>
+<body>
+</body>
+</html>
+

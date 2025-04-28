@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Accueil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav class="barre_bouton_menu">
+        <div class="bouton_menu_gauche">
+            <a href="accueil.html">
+                <button id="bouton_menu_actif" class="bouton_menu" disabled>accueil</button>
+            </a>
+            <a href="cours.html">
+                <button class="bouton_menu">mes cours</button>
+            </a>
+            <a href="notes.html">
+                <button class="bouton_menu">mes notes</button>
+            </a>
+        </div>
+        <div>
+            <a href="connexion.html">
+                <button class="bouton_menu">déconnexion</button>
+            </a>
+        </div>
+    </nav>
+</header>
+
+<div class="page_acceuil">
+    <main>
+
+        <section class="recent-courses">
+            <h2>cour récent</h2>
+            <div class="course-list">
+                <div class="cour" onclick="window.location.href='cour.html'" style="cursor: pointer;">
+                    <div class="course-img"></div>
+                    <p>WE4A</p>
+                    <a class="lien" href="sujet_projet.pdf" download="sujet_projet.pdf" onclick="event.stopPropagation();">Sujet projet ⬇</a>
+                </div>
+                <div class="cour" onclick="window.location.href='cour.html'" style="cursor: pointer;">
+                    <div class="course-img"></div>
+                    <p>SI40</p>
+                    <p >Salle A101</p>
+                </div>
+                <div class="cour" onclick="window.location.href='cour.html'" style="cursor: pointer;">
+                    <div class="course-img"></div>
+                    <p>RS40</p>
+                    <p>Début TP</p>
+                </div>
+            </div>
+            <button id="bouton_defil_cour">▼</button>
+        </section>
+        <div class="activity">
+            <h2>dernière activité</h2>
+            <div id="activity-container">
+                <li>⭐ en "cour" "personne à "action" "Titre"</li>
+                <li>🔺 en WE4A M.Lombar à rajouter
+                    <a class="lien" href="sujet_projet.pdf" download="sujet_projet.pdf">Sujet projet ⬇</a>
+                </li>
+                <li>🔺 en WE4A M.Lombar à annoncer changement de salle</li>
+                <li>⭐ en "cour" "personne à "action" "Titre"</li>
+                <li>🔺 en WE4A M.Lombar à rajouter
+                    <a class="lien" href="sujet_projet.pdf" download="sujet_projet.pdf">Sujet projet ⬇</a>
+                </li>
+                <li>🔺 en WE4A M.Lombar à annoncer changement de salle</li>
+                <li>⭐ en "cour" "personne à "action" "Titre"</li>
+                <li>🔺 en WE4A M.Lombar à rajouter
+                    <a class="lien" href="sujet_projet.pdf" download="sujet_projet.pdf">Sujet projet ⬇</a>
+                </li>
+                <li>🔺 en WE4A M.Lombar à annoncer changement de salle</li>
+            </div>
+            <div id="scroll-trigger"></div>
+        </div>
+
+    </main>
+    <main id="page_acceuil_agenda">
+        <!-- FullCalendar CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
+
+        <!-- FullCalendar JS -->
+        <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+
+        <h2><a class="lien" href="agenda.html">Mon Agenda</a></h2>
+        <div id="agenda"></div>
+    </main>
+
+
+</div>
+
+<script src="accueil.js"></script>
+</body>
+</html>
+</title>
+</head>
+<body>
+</body>
+</html>
+
