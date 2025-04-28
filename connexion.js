@@ -1,3 +1,4 @@
+//todo le conecter à la base de donné et enlever droit d'accès pour demander à la bdd car droit_accès côté client donc archi pas secure
 document.addEventListener("DOMContentLoaded", function() {
     const formConnexion = document.getElementById("form_connexion");
 
@@ -12,10 +13,27 @@ document.addEventListener("DOMContentLoaded", function() {
             console.log("Mot de passe :", motDePasse);
 
 
-            if (nom === "admin" && motDePasse === "1234") {
+            let droit_accès = -1;
+
+            if (nom === "profadmin" && motDePasse === "1234") {
+                droit_accès = 3;
+                window.location.href = "accueil.html";
+            } else if (nom === "admin" && motDePasse === "1234") {
+                droit_accès = 2;
+                window.location.href = "admin.html";
+            } else if (nom === "prof" && motDePasse === "1234") {
+                droit_accès = 1;
+                window.location.href = "accueil.html";
+            } else if (nom === "eleve" && motDePasse === "1234") {
+                droit_accès = 0;
                 window.location.href = "accueil.html";
             } else {
-                document.getElementById("erreur_message").textContent = "Identifiants ou mdp incorrects. Veux-tu t'inscrire ?";
+                document.getElementById("erreur_message").textContent = "Identifiants ou mot de passe incorrects. Veux-tu t'inscrire ?";
+            }
+
+            // Si tu veux stocker le droit d'accès, tu peux le mettre dans localStorage
+            if (droit_accès !== -1) {
+                localStorage.setItem("droit_accès", droit_accès);
             }
         });
     }
