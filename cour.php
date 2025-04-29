@@ -28,64 +28,35 @@
     </nav>
 </header>
 
-<div class="page_cours">
+
+
+<div class="page_cour">
     <main>
-            <div class="header-cours">
-                <h1 class="titre-cours">Mon cours</h1>
-                <h3 class="sous-titre">Contenu du cours</h3>
-            </div>
+        <div class="header-cours">
+            <h1 class="titre-cours">WE4A</h1>
+            <h3 class="sous-titre">HTML, CSS, JS, PHP...</h3>
+        </div>
 
-            <!-- Menu de navigation (Notes, Participants) -->
-            <div class="menu-cours">
-                <button class="menu-btn" onclick="showSection('notes')">Notes du cours</button>
-                <button class="menu-btn" onclick="showSection('participants')">Participants</button>
-            </div>
+        <!-- Menu de navigation (Notes, Participants) -->
+        <div class="menu-cours">
+            <a href="note.php">
+                <button class="menu-btn">Notes du cours</button>
+            </a>
+            <button id="toggle-participants" class="menu-btn" onclick="toggleParticipants()">Participants</button>
+        </div>
 
-            <!-- Sections du cours -->
-            <div class="sections-cours">
-                <div class="section">
-                    <div class="section-header" onclick="toggleSection(this)">Section 1 : Introduction</div>
-                    <div class="section-content">Bienvenue dans la section 1. Voici le contenu introductif du cours.</div>
-                </div>
+        <!-- Section des posts -->
+        <div id="posts-section" class="sections-cours">
 
-                <div class="section">
-                    <div class="section-header" onclick="toggleSection(this)">Section 2 : Théorie</div>
-                    <div class="section-content">Voici la théorie importante du cours. Documents et vidéos ici.</div>
-                </div>
+        </div>
 
-                <div class="section">
-                    <div class="section-header" onclick="toggleSection(this)">Section 3 : Exercices</div>
-                    <div class="section-content">Voici quelques exercices à réaliser pour pratiquer.</div>
-                </div>
-
-                <div class="section">
-                    <div class="section-header" onclick="toggleSection(this)">Section 4 : Étude de cas</div>
-                    <div class="section-content">Étude de cas pratique sur le sujet du cours.</div>
-                </div>
-
-                <div class="section">
-                    <div class="section-header" onclick="toggleSection(this)">Section 5 : Évaluation</div>
-                    <div class="section-content">Tests, quiz et évaluation finale.</div>
-                </div>
-            </div>
-
-            <!-- Sections de Notes et Participants -->
-            <div id="notes" class="page_acceuil" style="display:none;">
-                <div class="activity" style="width: 100%;">
-                    <h3>Notes</h3>
-                    <p>En travaux...</p>
-                </div>
-            </div>
-
-            <div id="participants" class="page_acceuil" style="display:none;">
-                <div class="activity" style="width: 100%;">
-                    <h3>Participants</h3>
-                    <p>En travaux...</p>
-                </div>
-            </div>
+        <!-- Section Participants -->
+        <div id="participants" class="page_acceuil" style="display:none;">
+            <input type="text" id="searchUser" placeholder="Rechercher un utilisateur..." oninput="rechercheUser()">
+            <div id="participants-list"></div>
+        </div>
     </main>
 </div>
-
 
 <script src="cour.js"></script>
 </body>

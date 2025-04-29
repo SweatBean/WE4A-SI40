@@ -219,89 +219,40 @@ main {
 
 
 /*cour*/
-.page_cours {
-    gap: 20px; /* Espacement entre chaque section */
-    width: 100%;
-    padding: 20px; /* Ajouter du padding pour espacer un peu les bords */
-}
-
-/* Conteneur de l'en-tête du cours */
-
-
-/* Titre du cours */
-.titre-cours {
-    font-size: 2.5em;
-    margin: 0;
-    color: #1C4E80;
-    text-align: center;
-}
-
-/* Sous-titre (contenu du cours) */
-.sous-titre {
-    font-size: 1.5em;
-    color: #777;
-    text-align: center;
-    margin-top: 10px; /* Espace au-dessus du sous-titre */
-}
-
-/* Menu de navigation entre les sections (Notes et Participants) */
 
 
 .menu-btn {
     padding: 10px 20px;
-    background-color: #4da6ff;
+    margin: 5px;
+    background-color: #3498db;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    width: 150px; /* Largeur fixe pour les boutons */
 }
 
 
-
-
-
-/* Style de chaque section */
-.section {
-    width: 100%;
-    background-color: #e6e6e6;
-    margin: 10px 0;
-    border-radius: 8px;
-    overflow: hidden;
+.header-cours h1 {
+    margin-bottom: 5px;
 }
 
-/* Titre des sections (cliquable) */
-.section-header {
-    background-color: #ccc;
+.post {
+    background-color: white;
     padding: 15px;
-    cursor: pointer;
-    font-weight: bold;
+    margin-bottom: 15px;
+    border-left: 4px solid #3498db;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Contenu des sections (caché par défaut) */
-.section-content {
-    display: none;
-    padding: 10px 15px;
-    background-color: #f9f9f9;
+
+.participant-card {
+    background-color: #e0e0e0;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    width: 30%;
 }
 
-/* Lorsqu'une section est active (ouverte), on l'affiche */
-.section.active .section-content {
-    display: block;
-}
-
-/* Transition d'ouverture de section */
-.section-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease, padding 0.3s ease;
-    padding: 0 15px;
-}
-
-.section.active .section-content {
-    max-height: 500px; /* Ajuste la hauteur selon le contenu */
-    padding: 10px 15px;
-}
 
 
 
@@ -519,4 +470,20 @@ main {
 
 .remove-btn:hover {
     color: darkred;
+}
+
+
+#searchUser {
+    padding: 8px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.page_cour {
+    width: 100%;
+}
+
+.post {
+    margin-bottom: 20px;
 }
