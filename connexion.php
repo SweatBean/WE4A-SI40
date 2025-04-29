@@ -8,7 +8,15 @@
 <body>
 
 <header>
-    <nav class="barre_bouton_menu"></nav>
+    <nav class="barre_bouton_menu">
+        <div></div>
+        <div>
+            <a>
+                <button class="bouton_menu" onclick="infoconnection()">Difficulté à se connecter</button>
+            </a>
+        </div>
+    </nav>
+
 </header>
 
 

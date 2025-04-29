@@ -38,3 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+
+function infoconnection() {
+    alert("contacter votre établissement pour retrouver les accès de votre compte");
+}
