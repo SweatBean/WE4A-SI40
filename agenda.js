@@ -8,10 +8,16 @@ document.addEventListener('DOMContentLoaded', function () {
         firstDay: 1,
         events: [
             {
-                title: 'Rendus projet',
-                cour: 'WE4A',
-                description: 'Il faut rendre une version préliminaire du site contenant HTML, CSS, JS',
-                start: '2025-04-07'
+                title: "Sujet",
+                cour: "WE4A",
+                description: "Le sujet du projet est diponible",
+                start: "2025-04-29"
+            },
+            {
+                title: "changement heure",
+                cour: "WE4A",
+                description: "Le cour commencera à 8h30 au lieu de 8h ce jeudis",
+                start: "2025-04-28"
             }
         ],
         eventClick: function(info) {

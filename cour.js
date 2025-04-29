@@ -47,7 +47,7 @@ const posts = [
         lien: "sujet_projet.pdf"
     },
     {
-        titre: "Chapitre 2 : Les bases",
+        titre: "changement heure",
         date: "28 avril 2025",
         heure: "10h00",
         auteur: "Prof. Dupont",

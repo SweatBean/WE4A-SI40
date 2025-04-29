@@ -57,10 +57,16 @@ document.addEventListener("DOMContentLoaded", function () {
         firstDay: 1,
         events: [
             {
-                title: "Rendus projet",
+                title: "Sujet",
                 cour: "WE4A",
-                description: "Il faut rendre une version préliminaire du site contenant HTML, CSS, JS",
-                start: "2025-04-07"
+                description: "Le sujet du projet est diponible",
+                start: "2025-04-29"
+            },
+            {
+                title: "changement heure",
+                cour: "WE4A",
+                description: "Le cour commencera à 8h30 au lieu de 8h ce jeudis",
+                start: "2025-04-28"
             }
         ],
         eventClick: function (info) {
@@ -115,7 +121,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function renderPost(post) {
         const postDiv = document.createElement("div");
-        postDiv.className = "post";
+        postDiv.className = "post_aceuil";
 
         const title = document.createElement("h4");
         title.className = "post-title";

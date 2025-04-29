@@ -39,6 +39,8 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
+
+
 function infoconnection() {
-    alert("contacter votre établissement pour retrouver les accès de votre compte");
+    alert("pour le test vous pouvez utiliser en user profadmin, admin, prof, eleve avec mdp = 1234 \n \n contacter votre établissement pour retrouver les accès de votre compte");
 }

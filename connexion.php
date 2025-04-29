@@ -23,12 +23,6 @@
 
 <section class="page_connexion">
     <h2>Connexion</h2>
-    <div>
-        pour le test<br>
-        user =<br>
-        profadmin/ admin/ prof/ eleve<br>
-        mdp = 1234
-    </div>
     <form id="form_connexion">
         <input class="connexion_input" type="text" id="utilisateur" placeholder="nom d'utilisateur" required>
         <input class="connexion_input" type="password" id="mdp" placeholder="mot de passe" required>
