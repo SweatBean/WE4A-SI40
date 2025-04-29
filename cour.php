@@ -10,18 +10,18 @@
 <header>
     <nav class="barre_bouton_menu">
         <div class="bouton_menu_gauche">
-            <a href="accueil.html">
+            <a href="accueil.php">
                 <button class="bouton_menu">Accueil</button>
             </a>
-            <a href="cours.html">
+            <a href="cours.php">
                 <button class="bouton_menu">mes cours</button>
             </a>
-            <a href="notes.html">
+            <a href="notes.php">
                 <button class="bouton_menu">mes notes</button>
             </a>
         </div>
         <div>
-            <a href="connexion.html">
+            <a href="connexion.php">
                 <button class="bouton_menu">déconnexion</button>
             </a>
         </div>

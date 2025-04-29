@@ -17,16 +17,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
             if (nom === "profadmin" && motDePasse === "1234") {
                 droit_accès = 3;
-                window.location.href = "accueil.html";
+                window.location.href = "accueil.php";
             } else if (nom === "admin" && motDePasse === "1234") {
                 droit_accès = 2;
-                window.location.href = "admin.html";
+                window.location.href = "admin.php";
             } else if (nom === "prof" && motDePasse === "1234") {
                 droit_accès = 1;
-                window.location.href = "accueil.html";
+                window.location.href = "accueil.php";
             } else if (nom === "eleve" && motDePasse === "1234") {
                 droit_accès = 0;
-                window.location.href = "accueil.html";
+                window.location.href = "accueil.php";
             } else {
                 document.getElementById("erreur_message").textContent = "Identifiants ou mot de passe incorrects. Veux-tu t'inscrire ?";
             }

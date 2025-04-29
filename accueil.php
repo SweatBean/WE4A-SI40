@@ -10,18 +10,18 @@
 <header>
     <nav class="barre_bouton_menu">
         <div class="bouton_menu_gauche">
-            <a href="accueil.html">
+            <a href="accueil.php">
                 <button id="bouton_menu_actif" class="bouton_menu" disabled>accueil</button>
             </a>
-            <a href="cours.html">
+            <a href="cours.php">
                 <button class="bouton_menu">mes cours</button>
             </a>
-            <a href="notes.html">
+            <a href="notes.php">
                 <button class="bouton_menu">mes notes</button>
             </a>
         </div>
         <div>
-            <a href="connexion.html">
+            <a href="connexion.php">
                 <button class="bouton_menu">déconnexion</button>
             </a>
         </div>
@@ -34,17 +34,17 @@
         <section class="recent-courses">
             <h2>cour récent</h2>
             <div class="course-list">
-                <div class="cour" onclick="window.location.href='cour.html'" style="cursor: pointer;">
+                <div class="cour" onclick="window.location.href='cour.php'" style="cursor: pointer;">
                     <div class="course-img"></div>
                     <p>WE4A</p>
                     <a class="lien" href="sujet_projet.pdf" download="sujet_projet.pdf" onclick="event.stopPropagation();">Sujet projet ⬇</a>
                 </div>
-                <div class="cour" onclick="window.location.href='cour.html'" style="cursor: pointer;">
+                <div class="cour" onclick="window.location.href='cour.php'" style="cursor: pointer;">
                     <div class="course-img"></div>
                     <p>SI40</p>
                     <p >Salle A101</p>
                 </div>
-                <div class="cour" onclick="window.location.href='cour.html'" style="cursor: pointer;">
+                <div class="cour" onclick="window.location.href='cour.php'" style="cursor: pointer;">
                     <div class="course-img"></div>
                     <p>RS40</p>
                     <p>Début TP</p>
@@ -82,7 +82,7 @@
         <!-- FullCalendar JS -->
         <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
 
-        <h2><a class="lien" href="agenda.html">Mon Agenda</a></h2>
+        <h2><a class="lien" href="agenda.php">Mon Agenda</a></h2>
         <div id="agenda"></div>
     </main>
 

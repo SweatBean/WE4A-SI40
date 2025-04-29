@@ -13,7 +13,7 @@
 
         </div>
         <div>
-            <a href="connexion.html">
+            <a href="connexion.php">
                 <button class="bouton_menu">déconnexion</button>
             </a>
         </div>
@@ -26,17 +26,18 @@
 <main id="main_cours">
     <div class="tabs">
         <button class="tab-button active" onclick="openTab('tabUE')">UE</button>
-        <button class="tab-button" onclick="openTab('tabcour')">User</button>
+        <button class="tab-button" onclick="openTab('tabuser')">User</button>
     </div>
 
-    <section class="recent-courses">
+    <section class="tab-active">
         <div id="tabUE" class="tab-content active">
             <div class="form-section">
                 <h2>Créer une UE</h2>
-                <!-- todo rajouter description du cour et image -->
                 <input type="text" id="nomUe" placeholder="Nom de l'UE">
                 <input type="text" id="descriptionUe" placeholder="description">
-
+                <label for="imageUE">Image de l'UE :</label>
+                <input type="file" id="imageUE" accept="image/*" onchange="previewImageUE(event)">
+                <img id="imageUEPreview" src="#" alt="Aperçu de l'image" style="display:none; max-width: 100%; margin-top: 10px;">
                 <button onclick="creerUE()">Créer UE</button>
             </div>
 
@@ -45,9 +46,10 @@
                 <input type="text" id="searchUE" placeholder="Rechercher une UE..." oninput="rechercheUE()">
                 <div id="ueList" class="list"></div>
             </div>
+            <div id="ueDetails" class="form-section" style="display:none;"></div>
         </div>
 
-        <div class="tab-content">
+        <div id="tabuser" class="tab-content">
             <div class="form-section">
                 <h2>Créer un Utilisateur</h2>
                 <input type="text" id="email" placeholder="email">
@@ -69,8 +71,11 @@
                 <input type="text" id="searchUser" placeholder="Rechercher un utilisateur..." oninput="rechercheUser()">
                 <div id="userList" class="list"></div>
             </div>
+            <div id="userDetails" class="form-section" style="display:none;"></div>
         </div>
     </section>
+
+
 </main>
 
 

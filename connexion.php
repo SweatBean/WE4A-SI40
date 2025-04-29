@@ -8,14 +8,7 @@
 <body>
 
 <header>
-    <nav class="barre_bouton_menu">
-        <div></div>
-        <div>
-            <a href="inscription.html">
-                <button class="bouton_menu">inscription</button>
-            </a>
-        </div>
-    </nav>
+    <nav class="barre_bouton_menu"></nav>
 </header>
 
 

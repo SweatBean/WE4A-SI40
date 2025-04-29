@@ -10,18 +10,18 @@
 <header>
   <nav class="barre_bouton_menu">
     <div class="bouton_menu_gauche">
-      <a href="accueil.html">
+      <a href="accueil.php">
         <button class="bouton_menu">accueil</button>
       </a>
-      <a href="cours.html">
+      <a href="cours.php">
         <button class="bouton_menu">mes cours</button>
       </a>
-      <a href="notes.html">
+      <a href="notes.php">
         <button id="bouton_menu_actif" class="bouton_menu" disabled>mes notes</button>
       </a>
     </div>
     <div>
-      <a href="connexion.html">
+      <a href="connexion.php">
         <button class="bouton_menu">déconnexion</button>
       </a>
     </div>
@@ -39,17 +39,17 @@
       </tr>
       </thead>
       <tbody>
-      <tr onclick="window.location.href='note.html';">
+      <tr onclick="window.location.href='note.php';">
         <td>RS40</td>
         <td>3ᵉ / 30</td>
         <td>16.5</td>
       </tr>
-      <tr onclick="window.location.href='note.html';">
+      <tr onclick="window.location.href='note.php';">
         <td>SI40</td>
         <td>5ᵉ / 30</td>
         <td>14.8</td>
       </tr>
-      <tr onclick="window.location.href='note.html';">
+      <tr onclick="window.location.href='note.php';">
         <td>WE4A</td>
         <td>1ᵉʳ / 30</td>
         <td>19.2</td>
