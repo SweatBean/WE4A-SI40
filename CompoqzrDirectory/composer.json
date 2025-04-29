@@ -1,0 +1,14 @@
+{
+  "name": "vendor_name/WE4A-SI40",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Elodie",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+  }
+}
