@@ -13,6 +13,9 @@
 
         </div>
         <div>
+            <a href="accueil.php">
+                <button id="prof-toggle" class="bouton_menu">prof</button>
+                <a/>
             <a href="connexion.php">
                 <button class="bouton_menu">déconnexion</button>
             </a>

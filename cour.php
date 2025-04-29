@@ -21,6 +21,7 @@
             </a>
         </div>
         <div>
+            <button id="prof-toggle" class="bouton_menu">prof</button>
             <a href="connexion.php">
                 <button class="bouton_menu">déconnexion</button>
             </a>
@@ -43,6 +44,7 @@
                 <button class="menu-btn">Notes du cours</button>
             </a>
             <button id="toggle-participants" class="menu-btn" onclick="toggleParticipants()">Participants</button>
+            <button id="add-post-button" class="menu-btn">➕ Ajouter un Post</button>
         </div>
 
         <!-- Section des posts -->
@@ -55,6 +57,26 @@
             <input type="text" id="searchUser" placeholder="Rechercher un utilisateur..." oninput="rechercheUser()">
             <div id="participants-list"></div>
         </div>
+        <div id="edit-form" style="display: none;">
+            <h3>Modifier le post</h3>
+            <form id="post-edit-form">
+                <label>Titre :</label>
+                <input type="text" id="edit-titre"><br>
+
+                <label>Contenu :</label>
+                <textarea id="edit-contenu"></textarea><br>
+
+                <label>Nom du fichier :</label>
+                <input type="text" id="edit-nom-fichier"><br>
+
+                <label>Fichier :</label>
+                <input type="file" id="edit-fichier"><br>
+
+                <button type="submit">Enregistrer</button>
+                <button type="button" onclick="cancelEdit()">Annuler</button>
+            </form>
+        </div>
+
     </main>
 </div>
 

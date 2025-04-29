@@ -1,3 +1,5 @@
+let isProfMode = false;
+
 const users = [
     { nom: "Alice Martin", role: "Étudiante", email: "alice@example.com" },
     { nom: "Jean Dupont", role: "Professeur", email: "jean@example.com" },
@@ -14,13 +16,13 @@ function toggleParticipants() {
     isParticipantsVisible = !isParticipantsVisible;
 
     if (isParticipantsVisible) {
-        postsSection.style.display = "none";  // Masque les posts
-        participantsSection.style.display = "block";  // Affiche la section participants
+        postsSection.style.display = "none";
+        participantsSection.style.display = "block";
         button.textContent = "Post";
-        renderParticipants(users);  // Affiche la liste des participants
+        renderParticipants(users);
     } else {
-        postsSection.style.display = "block";  // Affiche les posts
-        participantsSection.style.display = "none";  // Masque la section participants
+        postsSection.style.display = "block";
+        participantsSection.style.display = "none";
         button.textContent = "Participants";
     }
 }
@@ -34,15 +36,13 @@ function rechercheUser() {
     renderParticipants(filteredUsers);
 }
 
-
-
 const posts = [
     {
         titre: "Sujet",
         date: "29 avril 2025",
         heure: "15h12",
         auteur: "Prof. Dupont",
-        contenu: "Le sujet du projet est diponible : ",
+        contenu: "Le sujet du projet est disponible : ",
         nom_lien: "sujet",
         lien: "sujet_projet.pdf"
     },
@@ -51,14 +51,11 @@ const posts = [
         date: "28 avril 2025",
         heure: "10h00",
         auteur: "Prof. Dupont",
-        contenu: "Le cour commencera à 8h30 au lieu de 8h ce jeudis",
-        nom_lein: null,
+        contenu: "Le cours commencera à 8h30 au lieu de 8h ce jeudi",
+        nom_lien: null,
         lien: null
     }
 ];
-
-
-
 
 function renderParticipants(filteredUsers) {
     const container = document.getElementById("participants-list");
@@ -72,12 +69,21 @@ function renderParticipants(filteredUsers) {
     });
 }
 
+document.getElementById("prof-toggle").addEventListener("click", () => {
+    isProfMode = !isProfMode;
+    renderPosts();
+});
 
 function renderPosts() {
     const container = document.getElementById("posts-section");
     container.innerHTML = "";
 
-    posts.forEach(post => {
+    const addPostButton = document.getElementById("add-post-button");
+    if (addPostButton) {
+        addPostButton.style.display = isProfMode ? "inline-block" : "none";
+    }
+
+    posts.forEach((post, index) => {
         const postDiv = document.createElement("div");
         postDiv.className = "post";
 
@@ -106,11 +112,68 @@ function renderPosts() {
         postDiv.appendChild(meta);
         postDiv.appendChild(content);
 
+        if (isProfMode) {
+            const editBtn = document.createElement("button");
+            editBtn.textContent = "✏️";
+            editBtn.className = "edit-button";
+            editBtn.onclick = () => editPost(index);
+
+            const deleteBtn = document.createElement("button");
+            deleteBtn.textContent = "🗑️";
+            deleteBtn.className = "delete-button";
+            deleteBtn.onclick = () => {
+                if (confirm("Supprimer ce post ?")) {
+                    posts.splice(index, 1);
+                    renderPosts();
+                }
+            };
+
+            const actionsDiv = document.createElement("div");
+            actionsDiv.className = "post-actions";
+            actionsDiv.appendChild(editBtn);
+            actionsDiv.appendChild(deleteBtn);
+            postDiv.appendChild(actionsDiv);
+        }
+
         container.appendChild(postDiv);
     });
 }
 
-// Affichage initial des posts au chargement
+let postIndexToEdit = null;
+
+function editPost(index) {
+    const post = posts[index];
+    postIndexToEdit = index;
+
+    document.getElementById("edit-titre").value = post.titre;
+    document.getElementById("edit-contenu").value = post.contenu;
+    document.getElementById("edit-nom-fichier").value = post.nom_lien || "";
+    document.getElementById("edit-form").style.display = "block";
+}
+
+function cancelEdit() {
+    document.getElementById("edit-form").style.display = "none";
+    postIndexToEdit = null;
+}
+
+document.getElementById("post-edit-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (postIndexToEdit !== null) {
+        const titre = document.getElementById("edit-titre").value;
+        const contenu = document.getElementById("edit-contenu").value;
+        const nomFichier = document.getElementById("edit-nom-fichier").value;
+        const fichier = document.getElementById("edit-fichier").files[0];
+
+        posts[postIndexToEdit].titre = titre;
+        posts[postIndexToEdit].contenu = contenu;
+        posts[postIndexToEdit].nom_lien = nomFichier;
+        posts[postIndexToEdit].lien = fichier ? URL.createObjectURL(fichier) : posts[postIndexToEdit].lien;
+
+        renderPosts();
+        cancelEdit();
+    }
+});
+
 window.onload = function () {
     renderPosts();
 };
