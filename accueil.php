@@ -52,26 +52,8 @@
             </div>
             <button id="bouton_defil_cour">▼</button>
         </section>
-        <div class="activity">
-            <h2>dernière activité</h2>
-            <div id="activity-container">
-                <li>⭐ en "cour" "personne à "action" "Titre"</li>
-                <li>🔺 en WE4A M.Lombar à rajouter
-                    <a class="lien" href="sujet_projet.pdf" download="sujet_projet.pdf">Sujet projet ⬇</a>
-                </li>
-                <li>🔺 en WE4A M.Lombar à annoncer changement de salle</li>
-                <li>⭐ en "cour" "personne à "action" "Titre"</li>
-                <li>🔺 en WE4A M.Lombar à rajouter
-                    <a class="lien" href="sujet_projet.pdf" download="sujet_projet.pdf">Sujet projet ⬇</a>
-                </li>
-                <li>🔺 en WE4A M.Lombar à annoncer changement de salle</li>
-                <li>⭐ en "cour" "personne à "action" "Titre"</li>
-                <li>🔺 en WE4A M.Lombar à rajouter
-                    <a class="lien" href="sujet_projet.pdf" download="sujet_projet.pdf">Sujet projet ⬇</a>
-                </li>
-                <li>🔺 en WE4A M.Lombar à annoncer changement de salle</li>
-            </div>
-            <div id="scroll-trigger"></div>
+        <div class="activity" style="height: 400px; overflow-y: auto;">
+            <div id="posts-section" class="activity" style="padding: 10px;"></div>
         </div>
 
     </main>

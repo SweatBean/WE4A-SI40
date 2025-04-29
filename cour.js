@@ -97,7 +97,7 @@ function renderPosts() {
             const link = document.createElement("a");
             link.href = post.lien;
             link.target = "_blank";
-            link.textContent = post.nom_lien;
+            link.textContent = post.nom_lien + " ⬇";
             link.className = "lien";
             content.appendChild(link);
         }
