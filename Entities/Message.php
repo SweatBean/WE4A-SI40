@@ -5,7 +5,7 @@ use Doctrine\ORM\Mapping as ORM;
 #[ORM\Entity]
 class Message
 {
-    private int $sectionID;
+    private int $section;
     private string $title;
     //Demander à Alan une date en php
     private string $userName;
