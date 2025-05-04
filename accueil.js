@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // === 1. BOUTON "VOIR PLUS" POUR .course-list ===
+    // bouton pour afficher plus de cour
     const boutonDefilCour = document.getElementById("bouton_defil_cour");
     const courseList = document.querySelector(".course-list");
 
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // === 2. CHARGEMENT INFINI POUR .activity ===
+    // todo défilement des activité
     const activityContainer = document.getElementById("activity-container");
     const scrollActivity = document.querySelector(".activity");
     let loadingActivity = false;
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     loadMoreActivityItems(); // Chargement initial
 
-    // === 3. FULLCALENDAR ===
+    // calendrier
     const agenda = document.getElementById("agenda");
 
     const calendar = new FullCalendar.Calendar(agenda, {
@@ -71,13 +71,14 @@ document.addEventListener("DOMContentLoaded", function () {
         ],
         eventClick: function (info) {
             info.jsEvent.preventDefault();
-            window.location.href = "agenda.html";
+            window.location.href = "agenda.php";
+            //todo ne pas juste aller dans agenda mais aussi afficher détail de l'anonce
         }
     });
 
     calendar.render();
 
-    // === 4. AFFICHAGE DES POSTS (scroll infini) ===
+    // todo défillement post
     const postsSection = document.getElementById("posts-section");
 
     const posts = [
@@ -180,5 +181,5 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    loadMorePosts(); // Chargement initial
+    loadMorePosts();
 });

@@ -1,5 +1,5 @@
-//todo le conecter à la base de donné et enlever droit d'accès pour demander à la bdd car droit_accès côté client donc archi pas secure
 document.addEventListener("DOMContentLoaded", function() {
+    //logique du formulaire de connexion
     const formConnexion = document.getElementById("form_connexion");
 
     if (formConnexion) {
@@ -13,27 +13,17 @@ document.addEventListener("DOMContentLoaded", function() {
             console.log("Mot de passe :", motDePasse);
 
 
-            let droit_accès = -1;
-
+            //pas connecter au back donc ce code pour l'instant
             if (nom === "profadmin" && motDePasse === "1234") {
-                droit_accès = 3;
-                window.location.href = "accueil.php";
+                window.location.href = "admin.php";
             } else if (nom === "admin" && motDePasse === "1234") {
-                droit_accès = 2;
                 window.location.href = "admin.php";
             } else if (nom === "prof" && motDePasse === "1234") {
-                droit_accès = 1;
                 window.location.href = "accueil.php";
             } else if (nom === "eleve" && motDePasse === "1234") {
-                droit_accès = 0;
                 window.location.href = "accueil.php";
             } else {
-                document.getElementById("erreur_message").textContent = "Identifiants ou mot de passe incorrects. Veux-tu t'inscrire ?";
-            }
-
-            // Si tu veux stocker le droit d'accès, tu peux le mettre dans localStorage
-            if (droit_accès !== -1) {
-                localStorage.setItem("droit_accès", droit_accès);
+                document.getElementById("erreur_message").textContent = "Identifiants ou mot de passe incorrects.";
             }
         });
     }
@@ -42,5 +32,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 function infoconnection() {
+    //texte d'affichage si probèle connexion
     alert("pour le test vous pouvez utiliser en user profadmin, admin, prof, eleve avec mdp = 1234 \n \n contacter votre établissement pour retrouver les accès de votre compte");
 }

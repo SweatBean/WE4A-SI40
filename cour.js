@@ -1,14 +1,18 @@
+//savoir si on est prof
 let isProfMode = false;
 
+//données d'example
 const users = [
     { nom: "Alice Martin", role: "Étudiante", email: "alice@example.com" },
     { nom: "Jean Dupont", role: "Professeur", email: "jean@example.com" },
     { nom: "Lucie Durand", role: "Étudiante", email: "lucie@example.com" }
 ];
 
+//savoir si on voit participant
 let isParticipantsVisible = false;
 
 function toggleParticipants() {
+    //changer si on voit ou non les participants
     const postsSection = document.getElementById("posts-section");
     const participantsSection = document.getElementById("participants");
     const button = document.getElementById("toggle-participants");
@@ -28,6 +32,7 @@ function toggleParticipants() {
 }
 
 function rechercheUser() {
+    // recherche des User
     const filtre = document.getElementById("searchUser").value.toLowerCase();
     const filteredUsers = users.filter(user =>
         user.nom.toLowerCase().includes(filtre) ||
@@ -36,6 +41,7 @@ function rechercheUser() {
     renderParticipants(filteredUsers);
 }
 
+//donées exemple
 const posts = [
     {
         titre: "Sujet",
@@ -58,6 +64,7 @@ const posts = [
 ];
 
 function renderParticipants(filteredUsers) {
+    //affichage des participants
     const container = document.getElementById("participants-list");
     container.innerHTML = "";
 
@@ -70,11 +77,14 @@ function renderParticipants(filteredUsers) {
 }
 
 document.getElementById("prof-toggle").addEventListener("click", () => {
+    //changement de rôle (elève / prof)
     isProfMode = !isProfMode;
     renderPosts();
 });
 
 function renderPosts() {
+    //permet d'afficher les post (et outils d'édition et poubelle si prof)
+    //todo gérérer différent type de post + ceux épinglet
     const container = document.getElementById("posts-section");
     container.innerHTML = "";
 
@@ -138,10 +148,11 @@ function renderPosts() {
         container.appendChild(postDiv);
     });
 }
-
+//permet déditer/de créer un post
 let postIndexToEdit = null;
 
 function editPost(index) {
+    //modifier un psot
     const post = posts[index];
     postIndexToEdit = index;
 
@@ -151,12 +162,19 @@ function editPost(index) {
     document.getElementById("edit-form").style.display = "block";
 }
 
+function creerPost() {
+    //créer un post
+    document.getElementById("edit-form").style.display = "block";
+}
+
 function cancelEdit() {
+    //annulation de création ou de modification de post
     document.getElementById("edit-form").style.display = "none";
     postIndexToEdit = null;
 }
 
 document.getElementById("post-edit-form").addEventListener("submit", function (e) {
+    //permet de préremplir le questionnaire si on veut modifier un post
     e.preventDefault();
     if (postIndexToEdit !== null) {
         const titre = document.getElementById("edit-titre").value;
@@ -173,7 +191,7 @@ document.getElementById("post-edit-form").addEventListener("submit", function (e
         cancelEdit();
     }
 });
-
+//chargement au lancement
 window.onload = function () {
     renderPosts();
 };

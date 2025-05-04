@@ -38,21 +38,18 @@
             <h3 class="sous-titre">HTML, CSS, JS, PHP...</h3>
         </div>
 
-        <!-- Menu de navigation (Notes, Participants) -->
         <div class="menu-cours">
             <a href="note.php">
                 <button class="menu-btn">Notes du cours</button>
             </a>
             <button id="toggle-participants" class="menu-btn" onclick="toggleParticipants()">Participants</button>
-            <button id="add-post-button" class="menu-btn">➕ Ajouter un Post</button>
+            <button id="add-post-button" class="menu-btn" onclick="creerPost()">➕ Ajouter un Post</button>
         </div>
 
-        <!-- Section des posts -->
         <div id="posts-section" class="sections-cours">
 
         </div>
 
-        <!-- Section Participants -->
         <div id="participants" class="page_acceuil" style="display:none;">
             <input type="text" id="searchUser" placeholder="Rechercher un utilisateur..." oninput="rechercheUser()">
             <div id="participants-list"></div>

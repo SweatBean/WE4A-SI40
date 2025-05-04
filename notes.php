@@ -27,7 +27,7 @@
     </div>
   </nav>
 </header>
-
+<!-- todo faire toute la logique -->
 <main id="main_cours">
   <section id="section_notes">
     <table id="notes-cliquable" class="notes-table">

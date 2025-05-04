@@ -1,24 +1,22 @@
 function openTab(tabId) {
-    // Enlever 'active' de tous les contenus
+    //onglet
     document.querySelectorAll('.tab-content').forEach(tab => {
         tab.classList.remove('active');
     });
 
-    // Enlever 'active' de tous les boutons
     document.querySelectorAll('.tab-button').forEach(button => {
         button.classList.remove('active');
     });
 
-    // Ajouter 'active' à l'onglet choisi
     document.getElementById(tabId).classList.add('active');
 
-    // Ajouter 'active' au bouton cliqué
     const clickedButton = Array.from(document.querySelectorAll('.tab-button'))
         .find(btn => btn.getAttribute("onclick").includes(tabId));
     if (clickedButton) clickedButton.classList.add('active');
 }
 
 function previewImageUE(event) {
+    //prévisualisation des immages de l'ue
     const input = event.target;
     const preview = document.getElementById('imageUEPreview');
 
@@ -32,7 +30,7 @@ function previewImageUE(event) {
     }
 }
 
-// Données d'exemple
+// donné exemple
 const exemplesUE = [
     { nom: "RS40", description: "Réseau et cybersécurité." },
     { nom: "SI40", description: "Les bases de données." },
@@ -47,14 +45,13 @@ const exemplesUsers = [
 
 
 const associations = {
-    // nomUe: [emailUser]
     "RS40": ["alice@example.com"],
     "SI40": ["bob@example.com"],
 };
 
 
-// Affichage des UE
 function chargerUE(filtre = "") {
+    //afficher UE
     const ueList = document.getElementById("ueList");
     ueList.innerHTML = ""; // Vide la liste avant de remplir
 
@@ -64,14 +61,14 @@ function chargerUE(filtre = "") {
             const div = document.createElement("div");
             div.className = "ue-item";
             div.textContent = `${ue.nom} — ${ue.description}`;
-            div.onclick = () => afficherDetailsUE(ue.nom); // <- ICI c’est bon
+            div.onclick = () => afficherDetailsUE(ue.nom);
             ueList.appendChild(div);
         });
 }
 
 
-// Affichage des utilisateurs
 function chargerUsers(filtre = "") {
+    //affiche user
     const userList = document.getElementById("userList");
     userList.innerHTML = ""; // Vide la liste avant de remplir
 
@@ -81,18 +78,20 @@ function chargerUsers(filtre = "") {
             const div = document.createElement("div");
             div.className = "user-item";
             div.textContent = `${user.nom} (${user.role}) — ${user.email}`;
-            div.onclick = () => afficherDetailsUser(user.email); // <- ICI aussi
+            div.onclick = () => afficherDetailsUser(user.email);
             userList.appendChild(div);
         });
 }
 
 
 function rechercheUE() {
+    //recherche avec mot clés dans les UE
     const filtre = document.getElementById("searchUE").value;
     chargerUE(filtre);
 }
 
 function rechercheUser() {
+    //recherche avec mot clés dans les user
     const filtre = document.getElementById("searchUser").value;
     chargerUsers(filtre);
 }
@@ -100,6 +99,7 @@ function rechercheUser() {
 
 
 function afficherDetailsUE(nomUE) {
+    //affiche le détaille d'une UE (nom, description user inscrit) depuit celui-ci on peut enlever des user ou en rajouter ou encore regarder un détail un user
     const ue = exemplesUE.find(u => u.nom === nomUE);
     const ueDetails = document.getElementById("ueDetails");
     if (!ue) return;
@@ -120,7 +120,7 @@ function afficherDetailsUE(nomUE) {
                 </div>
             `).join('')}
         </div>
-        <input type="text" id="ajoutUserUEInput" placeholder="Rechercher un utilisateur...">
+        <input type="text" id="ajoutUserUEInput" placeholder="Rechercher un utilisateur..." oninput="rechercheAjoutUser()">
         <button onclick="ajouterUserAUE('${ue.nom}')">Ajouter</button>
     `;
     ueDetails.style.display = "block";
@@ -133,6 +133,7 @@ function afficherDetailsUE(nomUE) {
 
 
 function afficherDetailsUser(email) {
+    //affiche le détaille d'un user (nom, e-mail, role) depuit celui-ci on peut enlever des UE ou en rajouter ou encore regarder un détail une UE
     const user = exemplesUsers.find(u => u.email === email);
     const userDetails = document.getElementById("userDetails");
     if (!user) return;
@@ -157,7 +158,7 @@ function afficherDetailsUser(email) {
                 `;
     }).join('')}
         </div>
-        <input type="text" id="ajoutUEUserInput" placeholder="Rechercher une UE...">
+        <input type="text" id="ajoutUEUserInput" placeholder="Rechercher une UE..." oninput="rechercheAjoutUE()">
         <button onclick="ajouterUEAUser('${email}')">Ajouter</button>
     `;
     userDetails.style.display = "block";
@@ -168,7 +169,7 @@ function afficherDetailsUser(email) {
 
 
 
-
+//a partir d'ici les fonction ne marche pas
 function retirerUserDeUE(email, nomUE) {
     const user = exemplesUsers.find(u => u.email === email);
     if (!user) return;
@@ -232,4 +233,4 @@ window.onload = function () {
     chargerUsers();
 };
 
-//todo changer tout le code pour relier à back
+//todo créer + rajouter ne marche pas

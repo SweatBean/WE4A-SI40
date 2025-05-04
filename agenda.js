@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+    //calendrier
     const agenda = document.getElementById('agenda');
     const main = document.getElementById('eventDetails');
 

@@ -32,8 +32,9 @@
     <main>
 
         <section class="recent-courses">
-            <h2>cour récent</h2>
+            <h2>Cour récent</h2>
             <div class="course-list">
+                <!-- todo géré les img des cour -->
                 <div class="cour" onclick="window.location.href='cour.php'" style="cursor: pointer;">
                     <div class="course-img"></div>
                     <p>WE4A</p>

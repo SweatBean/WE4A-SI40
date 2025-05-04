@@ -70,6 +70,7 @@
             </div>
 
             <div class="form-section">
+                <!-- todo mieux le faire pour pouvoir gérer plus de personne et mieux les gérer (changer de rôle, modifer mdp...)-->
                 <h2>Gérer les utilisateurs</h2>
                 <input type="text" id="searchUser" placeholder="Rechercher un utilisateur..." oninput="rechercheUser()">
                 <div id="userList" class="list"></div>
