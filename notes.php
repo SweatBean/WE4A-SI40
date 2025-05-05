@@ -61,7 +61,6 @@
 
 </main>
 
-<script src="notes.js"></script>
 </body>
 </html>
 </title>
